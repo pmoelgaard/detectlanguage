@@ -1,0 +1,28 @@
+{
+  "name": "detectlanguage",
+  "version": "1.0.1",
+  "description": "This is a JavaScript Client Library for the DetectLanguage Service API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pmoelgaard/detectlanguage"
+  },
+  "keywords": [
+    "language",
+    "detection",
+    "detectlanguage",
+    "javascript"
+  ],
+  "author": "Peter Andreas Moelgaard <admin@petermolgard.com> (http://petermolgaard.com/)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/pmoelgaard/detectlanguage/issues"
+  },
+  "homepage": "https://github.com/pmoelgaard/detectlanguage",
+  "dependencies": {
+    "request": "^2.53.0"
+  }
+}
