@@ -11,7 +11,7 @@ Offical Website:
 
 Sample Usage:
 
-    var DetectLanguage = require('../index');
+    var DetectLanguage = require('detectlanguage');
     var detectLanguage = new DetectLanguage({
         key: '[INSERT YOUR KEY HERE]'
     });
