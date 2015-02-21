@@ -16,7 +16,7 @@
 
     var DetectLanguage = require('../index');
     var detectLanguage = new DetectLanguage({
-        key: 'c1b5387065eb0bd2eca3fd274d515c00' //'[INSERT YOUR KEY HERE]'
+        key: '[INSERT YOUR KEY HERE]'
     });
 
     var dataSimple = "I am a Teapot and a Submarine";

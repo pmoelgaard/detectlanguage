@@ -6,6 +6,11 @@ JavaScript wrapper for [DetectLanguage Service](https://detectlanguage.com/).
 
 ---
 
+Installation
+---
+	npm install detectlanguage [--save]
+
+
 Usage
 ---
 
