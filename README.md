@@ -1,25 +1,34 @@
 Detect Language API
 ===
-
 JavaScript wrapper for [DetectLanguage Service](https://detectlanguage.com/).
 
-
----
+&nbsp;
 
 Installation
 ---
 	npm install detectlanguage [--save]
 
+&nbsp;
+
+Configuration
+---
+
+Before using Detect Language API client you have to setup your personal API key.  
+You can get it by signing up at [http://detectlanguage.com](http://detectlanguage.com)
+
+&nbsp;
 
 Usage
 ---
+
 
 ### Setup
 
     var DetectLanguage = require('detectlanguage');
     var detectLanguage = new DetectLanguage({
-        key: '[INSERT YOUR KEY HERE]'
-    });
+        key: '[INSERT YOUR KEY HERE]',
+        ssl: true|false (defaults to TRUE)
+    });    
 
     
 ### Simple Detection
@@ -140,11 +149,14 @@ Returns information about your account and it's status.
       status: "ACTIVE"
     }
 
----
+
+&nbsp;
 
 Author
 ---
 Peter Andreas Moelgaard ([GitHub](https://github.com/pmoelgaard), [Twitter](https://twitter.com/petermoelgaard))
+
+&nbsp;
 
 License
 ---

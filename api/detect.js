@@ -59,7 +59,12 @@ API.detect = function (params, callback) {
     var APIRequest = require('../lib/apirequest');
     var apiRequest = APIRequest(params, function(error, result) {
         if(!error) {
-            result = result.body.data.detections;
+            if(result.body && result.body.data && result.body.data.detections) {
+                result = result.body.data.detections;
+            }
+            else {
+                error = result;
+            }
         }
         callback(error, result);
     });

@@ -33,7 +33,11 @@ function API(options) {
     this.options = utils.extend(
         {},
         options,
-        { url: 'http://ws.detectlanguage.com/0.2' }
+        {
+            host: 'ws.detectlanguage.com',
+            version: '0.2',
+            ssl: true
+        }
     );
 
     /**
