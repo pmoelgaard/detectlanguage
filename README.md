@@ -1,40 +1,146 @@
-DetectLanguage JavaScript API
+Detect Language API
 ===
 
-Small convenience library allowing developers to easily interact with the DetectLanguage Service API.
-
-Offical Website:
-[https://detectlanguage.com/](https://detectlanguage.com/)
+JavaScript wrapper for [DetectLanguage Service](https://detectlanguage.com/).
 
 
 ---
 
-Sample Usage:
+Usage
+---
+
+### Setup
 
     var DetectLanguage = require('detectlanguage');
     var detectLanguage = new DetectLanguage({
         key: '[INSERT YOUR KEY HERE]'
     });
+
     
-    var dataSimple = "I love Titanic.";
+### Simple Detection
+Takes a simple string and detects the language with a list of detections.
+
+###### Request
+
+    var dataSimple = "I am a Teapot and a Submarine";
     detectLanguage.detect(dataSimple, function(error, result) {
         console.log(JSON.stringify(result));
     });
     
+###### Response
+    {
+      data: {
+        detections: [
+          {
+            language: "en",
+            isReliable: true,
+            confidence: 7.85
+          }
+        ]
+      }
+    }
+
+    
+### Bulk Detection (Recommended)
+Takes an array simple string and detects the language with a list of detections.
+
+###### Request
+    
     var dataBulk = [
-        "I love Titanic.",
-        "I hate Titanic.",
-        "I like Titanic."
+        "I am a Teapot and a Submarine",
+        "Soy una tetera y un submarino",
+        "Jeg er en tekande og en ubåd"
     ]
     detectLanguage.detect(dataBulk, function(error, result) {
         console.log(JSON.stringify(result));
     });
     
+###### Response
+    {
+      data: {
+        detections: [
+          [
+            {
+              language: "en",
+              isReliable: true,
+              confidence: 7.85
+            }
+          ],
+          [
+            {
+              language: "es",
+              isReliable: true,
+              confidence: 3.75
+            }
+          ],
+          [
+            {
+              language: "da",
+              isReliable: true,
+              confidence: 4.09
+            }
+          ]
+        ]
+      }
+    }
+    
+    
+### Supported Languages
+Returns the list of supported languages.
+
+###### Request
+
     detectLanguage.languages(function(error, result) {
         console.log(JSON.stringify(result));
     });
+    
+###### Response
+
+    [
+      {
+        code: "ab",
+        name: "ABKHAZIAN"
+      },
+      {
+        code: "aa",
+        name: "AFAR"
+      },
+      {
+        code: "af",
+        name: "AFRIKAANS"
+      }
+      ...
+    ]
+
+    
+### User Status
+Returns information about your account and it's status.
+
+###### Request
     
     detectLanguage.status(function(error, result) {
         console.log(JSON.stringify(result));
     });
 
+###### Response
+
+    {
+      date: "2015-02-21",
+      requests: 31,
+      bytes: 429,
+      plan: "FREE",
+      plan_expires: null,
+      daily_requests_limit: 5000,
+      daily_bytes_limit: 1048576,
+      status: "ACTIVE"
+    }
+
+---
+
+Author
+---
+Peter Andreas Moelgaard ([GitHub](https://github.com/pmoelgaard), [Twitter](https://twitter.com/petermoelgaard))
+
+License
+---
+Licensed under the Apache License, Version 2.0: [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)

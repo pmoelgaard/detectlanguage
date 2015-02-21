@@ -1,0 +1,15 @@
+    [
+      {
+        code: "ab",
+        name: "ABKHAZIAN"
+      },
+      {
+        code: "aa",
+        name: "AFAR"
+      },
+      {
+        code: "af",
+        name: "AFRIKAANS"
+      }
+      ...
+    ]

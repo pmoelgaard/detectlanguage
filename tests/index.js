@@ -19,15 +19,15 @@
         key: 'c1b5387065eb0bd2eca3fd274d515c00' //'[INSERT YOUR KEY HERE]'
     });
 
-    var dataSimple = "I love Titanic.";
+    var dataSimple = "I am a Teapot and a Submarine";
     detectLanguage.detect(dataSimple, function(error, result) {
         console.log(JSON.stringify(result));
     });
 
     var dataBulk = [
-        "I love Titanic.",
-        "I hate Titanic.",
-        "I like Titanic."
+        "I am a Teapot and a Submarine",
+        "Soy una tetera y un submarino",
+        "Jeg er en tekande og en ubåd"
     ]
     detectLanguage.detect(dataBulk, function(error, result) {
         console.log(JSON.stringify(result));
