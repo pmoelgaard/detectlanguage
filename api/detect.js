@@ -33,7 +33,7 @@ API.detect = function (params, callback) {
 
     var options = utils.extend({}, this.options, {
             service: 'detect',
-            method: 'GET'
+            method: 'POST'
         }
     )
 
@@ -41,8 +41,7 @@ API.detect = function (params, callback) {
         params = {
             options: options,
             params: {
-                json: true,
-                qs: { q: params }
+                json: { q: params }
             }
         };
     }
@@ -50,8 +49,7 @@ API.detect = function (params, callback) {
         params = {
             options: options,
             params: {
-                json: true,
-                qs: { q: params }
+                json: { q: params }
             }
         };
     }

@@ -35,10 +35,7 @@ API.languages = function(callback) {
     )
 
     var params = {
-        options: options,
-        params: {
-            json: true
-        }
+        options: options
     }
 
     var APIRequest = require('../lib/apirequest');
