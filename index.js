@@ -31,13 +31,12 @@ var utils = require('./lib/utils');
 function API(options) {
 
     this.options = utils.extend(
-        {},
-        options,
         {
             host: 'ws.detectlanguage.com',
             version: '0.2',
             ssl: true
-        }
+        },
+        options
     );
 
     /**
