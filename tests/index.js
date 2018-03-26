@@ -18,7 +18,7 @@
     var detectLanguage = new DetectLanguage({
         //key: '[INSERT YOUR KEY HERE]',
         key: 'c1b5387065eb0bd2eca3fd274d515c00',
-        ssl: false
+        ssl: true
     });
 
     var dataSimple = "I am a Teapot and a Submarine";
