@@ -1,6 +1,6 @@
 {
   "name": "detectlanguage",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "This is a JavaScript Client Library for the DetectLanguage Service API",
   "main": "index.js",
   "scripts": {
