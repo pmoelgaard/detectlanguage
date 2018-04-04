@@ -1,12 +1,15 @@
-Detect Language API (UNMAINTAINED)
+Detect Language API (Discontinued)
 ===
 JavaScript wrapper for [DetectLanguage Service](https://detectlanguage.com/).
 
 &nbsp;
 
-This repository is not being maintained, please go here for an updated version:
+Important Notice
+---
+This repository has been discontinued, please go here for an updated version:
 [https://github.com/detectlanguage/detectlanguage-node](https://github.com/detectlanguage/detectlanguage-node)
 
+&nbsp;
 &nbsp;
 
 Installation
